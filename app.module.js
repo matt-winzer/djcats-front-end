@@ -2,5 +2,5 @@
     'use strict';
 
     angular
-        .module('djcats', ['ui.router'])
+        .module('djcat', ['ui.router'])
 }());

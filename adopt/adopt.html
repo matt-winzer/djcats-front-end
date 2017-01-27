@@ -1,0 +1,72 @@
+<nav class="navbar navbar-default">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+            <a class="navbar-brand">DeJa Vu Cat Replacement</a>
+        </div>
+
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li><a href="/happiness">Adopt a Cat</a></li>
+                <li><a href="/memorial">Memorialize</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<div class="container">
+    <div class="row">
+        <div class="col-md-8">
+            <div>
+                <form ng-submit="$ctrl.addPost()" name="$ctrl.postForm" novalidate>
+                    <div>
+                        <label for="title ">Name</label>
+                        <input name="title" ng-model="$ctrl.post.title" id="title " class="form-control " ng-maxlength="20" required>
+                        <div class="error" ng-show="$ctrl.postForm.title.$touched && $ctrl.postForm.title.$invalid">
+                            <small class="error" ng-show="$ctrl.postForm.title.$error.required">
+                          A title is required.
+                        </small>
+                            <small class="error" ng-show="$ctrl.postForm.title.$error.maxlength">
+                          Your title cannot be longer than 20 characters
+                        </small>
+                        </div>
+                        <div>
+                            <label for="body ">Why do you want a Cat?</label>
+                            <textarea name="body" ng-model="$ctrl.post.body" id="body " class="form-control " required></textarea>
+                            <div class="error" ng-show="$ctrl.postForm.body.$touched && $ctrl.postForm.body.$invalid">
+                                <small class="error" ng-show="$ctrl.postForm.body.$error.required">
+                              A post body is required.
+                            </small>
+                            </div>
+                        </div>
+                        <div>
+                            <label for="author ">Color</label>
+                            <input name="author" ng-model="$ctrl.post.author" id="author " class="form-control " required>
+                            <div class="error" ng-show="$ctrl.postForm.author.$touched && $ctrl.postForm.author.$invalid">
+                                <small class="error" ng-show="$ctrl.postForm.author.$error.required">
+                              A post author is required.
+                            </small>
+                            </div>
+                            <div>
+                                <label for="image_url ">Age</label>
+                                <input name="image_url" ng-model="$ctrl.post.image_url" id="image_url " class="form-control " required>
+                                <div class="error" ng-show="$ctrl.postForm.image_url.$touched && $ctrl.postForm.image_url.$invalid">
+                                    <small class="error" ng-show="$ctrl.postForm.image_url.$error.required">
+                                  An image is required.
+                                </small>
+                                </div>
+                            </div>
+                            <div class="form-group ">
+                                <button type="submit " class="btn btn-primary " ng-disabled="$ctrl.postForm.$invalid"> Create Post
+                                  </button>
+                            </div>
+                        </div>
+                </form>
+                </div>
+            </div>
+        </div>
+    </div>

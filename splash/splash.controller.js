@@ -2,11 +2,12 @@
     'use strict'
 
     angular
-        .module('djcats')
+        .module('djcat')
         .controller('splashController', splashController);
 
 
     function splashController() {
         console.log('Hello from the splashController!');
     }
+
 })()

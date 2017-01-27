@@ -1,1 +1,47 @@
-<h1>Browse Controller Working!</h1>
+<nav class="navbar navbar-default">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+            <a class="navbar-brand">DeJa Vu Cat Replacement</a>
+        </div>
+
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li><a href="/happiness">Adopt a Cat</a></li>
+                <li><a href="/memorial">Memorialize</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+
+            <div class="well" ng-repeat="cat in $ctrl.livecats">
+                <div class=" media-left ">
+                    <img class="media-object " ng-src="{{cat.image_url}} " height="300em " width="300em ">
+                </div>
+                <div class="media-body ">
+                    <h4 class="media-heading ">
+                  {{cat.name}}
+                </h4>
+                    <p>
+                        Cat Type: {{cat.type}}
+                    </p>
+                    <p>
+                        Cat Age: {{cat.age}}
+                    </p>
+                    <p>
+                        Cat Color: {{cat.color}}
+                    </p>
+                    <button class="btn btn-default"><a href="/adopt">Adopt this Cat</a></button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,9 +1,9 @@
 (function() {
     'use strict';
 
-    angular.module('djcats').config(config)
+    angular.module('djcat').config(config)
 
-    config.$inject = ['$stateProvider', '$urlRouterProvider', '$locationProvider']
+    // config.$inject = ['$stateProvider', '$urlRouterProvider', '$locationProvider']
 
 
     function config($stateProvider, $urlRouterProvider, $locationProvider) {
@@ -24,6 +24,11 @@
                 name: 'browse',
                 url: '/happiness',
                 component: 'browseComponent',
+            })
+            .state({
+                name: 'adopt',
+                url: '/adopt',
+                component: 'adoptComponent',
             })
     }
 

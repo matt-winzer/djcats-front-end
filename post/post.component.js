@@ -1,12 +1,10 @@
 (function() {
-        'use strict'
+    'use strict'
 
-        angular
-            .module('djcats')
-            .component('postComponent', {
-                controller: 'postController',
-                templateUrl: 'post/post.html'
-            })
-
-        ;)
+    angular
+        .module('djcat')
+        .component('postComponent', {
+            controller: 'postController',
+            templateUrl: '/post/post.html'
+        })
 })();

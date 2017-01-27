@@ -1,12 +1,12 @@
 (function() {
-        'use strict'
+    'use strict'
 
-        angular
-            .module('djcats')
-            .component('splashComponent', {
-                controller: 'splashController',
-                templateUrl: 'splash/splash.html'
-            })
-
-        ;)
+    angular
+        .module('djcat')
+        .component('splashComponent', {
+            controller: function() {
+                console.log("hi from splash component");
+            },
+            templateUrl: '/splash/splash.html'
+        })
 })();
